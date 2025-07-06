@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Deal Services</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            color: #FFCC00;
+            padding: 30px 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .logo-container img {
+            height: 80px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .logo-container h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #FFD700;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #FFCC00;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #000;
+            color: #FFCC00;
+            background-image: url('https://example.com/texas-skyline.jpg'); /* Replace with your own image */
+            background-size: cover;
+            background-position: center;
+        }
+        .hero button {
+            background-color: #FFD700;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero button:hover {
+            background-color: #FFCC00;
+            color: black;
+        }
+        .services {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #F4E1B3;
+        }
+        .services div {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 15px;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .services div {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .logo-container {
+                flex-direction: column;
+            }
+            .logo-container img {
+                height: 60px;
+            }
+            .logo-container h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        .contact-form {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #FFD700;
+        }
+
+        .contact-form button {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #FFCC00;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #FFCC00;
+            padding: 10px 0;
+        }
+
+        .discounts {
+            background-color: #FFF8E1;
+            padding: 15px 20px;
+            margin-top: 30px;
+            border-top: 3px solid #FFD700;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .discounts h2 {
+            color: #FFCC00;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        .discounts p {
+            font-size: 1.1em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .discounts strong {
+            color: #000;
+        }
+
+        .texas-star {
+            width: 30px;
+            height: 30px;
+            background-color: #FFCC00;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Real Deal Services Logo">
+        <h1>Real Deal Services</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    <h2>Your Texas Property Experts</h2>
+    <p>Landscaping, Hardscapes, Pressure Washing & More</p>
+    <button onclick="document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' });">Get a Quote</button>
+</div>
+
+<div class="discounts">
+    <h2><span class="texas-star"></span>Special Discounts for Heroes</h2>
+    <p>We proudly offer discounts to active military, veterans, and first responders! Thank you for your service!</p>
+    <p><strong>Contact us today to learn more about our exclusive offers!</strong></p>
+</div>
+
+<div class="services" id="services">
+    <h2>Our Services</h2>
+    <div>
+        <h3>Hardscapes</h3>
+        <p>Stone, brick, and custom outdoor installations for your space.</p>
+    </div>
+    <div>
+        <h3>Landscaping</h3>
+        <p>Designing beautiful outdoor spaces that thrive in Texas heat.</p>
+    </div>
+    <div>
+        <h3>Pressure Washing</h3>
+        <p>Bringing your surfaces back to life with professional cleaning.</p>
+    </div>
+    <div>
+        <h3>Construction</h3>
+        <p>Concrete work, masonry, and other land improvement projects to enhance your property.</p>
+    </div>
+    <div>
+        <h3>Debris Removal & Cleanup</h3>
+        <p>Storm cleanup, debris removal, and property restoration. We’re here to help you get your land back to pristine condition quickly and efficiently.</p>
+    </div>
+</div>
+
+<div class="contact-form" id="contact">
+    <h2>Contact Us</h2>
+    <form action="send_email.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe your project" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <p>Phone: <a href="tel:+17372109559">737-210-9559</a></p>
+    <p>Email: <a href="mailto:realdealservice@outlook.com">realdealservice@outlook.com</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Real Deal Services | Proudly serving Texas!</p>
+</footer>
+
+</body>
+</html>
